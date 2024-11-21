@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color> <!-- Это цвет для основного интерфейса -->
+    <color name="colorPrimaryDark">#3700B3</color> <!-- Это темный оттенок для верхней панели -->
+    <color name="colorAccent">#03DAC5</color> <!-- Это цвет акцента (например, кнопки) -->
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <!-- Привязка к ViewModel -->
+        <variable
+            name="viewModel"
+            type="com.example.dndcharactermanager.ui.AddCharacterViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/characterName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Character Name"
+            android:text="@={viewModel.characterName}" /> <!-- Привязка к LiveData -->
+
+        <EditText
+            android:id="@+id/characterClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Character Class"
+            android:text="@={viewModel.characterClass}" /> <!-- Привязка к LiveData -->
+
+        <EditText
+            android:id="@+id/characterRace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Character Race"
+            android:text="@={viewModel.characterRace}" /> <!-- Привязка к LiveData -->
+
+        <EditText
+            android:id="@+id/characterDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Character Description"
+            android:text="@={viewModel.characterDescription}" /> <!-- Привязка к LiveData -->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Character"
+            android:onClick="@{viewModel::saveCharacter}" /> <!-- Привязка метода сохранения -->
+    </LinearLayout>
+
+</layout>
